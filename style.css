@@ -20,14 +20,29 @@ body {
     margin-left: 20px;
 }
 
+#add {
+    padding: 10px;
+    width: 180px;
+    margin-left: 70px;
+    margin-top: 30px;
+    background-color: brown;
+    color: white;
+}
+
 select,
 input {
     padding: 5px;
 }
 
+#quantity {
+    margin-left: 36px;
+}
+
+
 #bill_input_cont label {
     color: blue;
     margin-left: 20px;
+    float: left;
 }
 
 
