@@ -1,0 +1,39 @@
+/* start style coding */
+
+body {
+    background-color: cadetblue;
+}
+
+.border {
+    border: 1px solid red;
+}
+
+.align-center {
+    text-align: center;
+}
+
+.width {
+    width: 28%;
+}
+
+.margin_left_20px {
+    margin-left: 20px;
+}
+
+select,
+input {
+    padding: 5px;
+}
+
+#bill_input_cont label {
+    color: blue;
+    margin-left: 20px;
+}
+
+
+
+
+
+/* end style coding */
+
+/* bill input container code */
