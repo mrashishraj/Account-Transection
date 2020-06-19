@@ -9,8 +9,22 @@ window.onload = function () {
             status: false,
             item: element[0].value,
             quantity: element[1].value,
-            id: data.length + 1
+            total: 0,
+            id: data.length + 1,
         }
+
+        if (record.item == "Itli") {
+            record.total = Number(record.quantity) * 40
+        } else if (record.item == "Dosa") {
+            record.total = Number(record.quantity) * 60
+        } else if (record.item == "Burger") {
+            record.total = Number(record.quantity) * 50
+        } else if (record.item == "Veg - Nuddles") {
+            record.total = Number(record.quantity) * 90
+        } else if (record.item == "Burger") {
+            record.total = Number(record.quantity) * 50
+        }
+
         data.push(record);
         console.log(data);
         submitData(record)
@@ -25,14 +39,14 @@ function submitData(record) {
     itemElement.textContent = record.item;
     var quantityElement = document.createElement("td")
     quantityElement.textContent = record.quantity;
+    var totalInQuantity = document.createElement("td")
+    totalInQuantity.textContent = record.total
 
     row.appendChild(itemElement);
     row.appendChild(quantityElement);
+    row.appendChild(totalInQuantity);
 
     var table = document.getElementById("menu")
     table.appendChild(row)
-
-
-
 
 }
