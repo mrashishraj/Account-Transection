@@ -100,44 +100,27 @@
                     <input type="text" id="userInput">
                     <label for="">Password</label>
                     <input type="password" id="passInput">
-                    <button id="submit" onclick="loginAccess()"><a href="index.html"
-                            style="text-decoration: none;">Login</a></button>
-                </form>
-
-
-                <form action="" id="granted-form">
-                    <label for="">Dear Ashish Click Here billing desk</label>
-                    <button id="billingPage">Billing Desk</button>
+                    <button id="submit">Login</button>
                 </form>
             </div>
         </div>
-
-
-
-
-
     </div>
     <script type="text/javascript">
-        var restroStaff = [{
-            username: "Ashish",
-            password: "ashu"
-        }, ]
+        window.onload = function () {
+            var btn = document.getElementById("submit")
+            btn.addEventListener("click", function () {
+                var userInput = document.getElementById('userInput').value
+                var passInput = document.getElementById('passInput').value
 
-        function loginAccess() {
-            var userInput = document.getElementById('userInput').value
-            var passInput = document.getElementById('passInput').value
-            var user = document.getElementById('select').value
-
-
-            for (var i = 0; i < restroStaff.length; i++) {
-                if (userInput === restroStaff[i].username && passInput === restroStaff[i].password) {
+                if (userInput === "Ashish" && passInput === "ashu") {
                     alert(userInput + "==>" + "Welcome to the billing Desk")
-                    href = "index.html"
+                    location.href = "index.html";
                 } else {
                     alert("User id or password did not match")
                 }
-            }
 
+
+            })
         }
     </script>
 </body>
